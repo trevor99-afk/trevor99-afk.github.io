@@ -71,6 +71,20 @@ h3 { margin: 0 0 6px; font-size: 1.15rem; }
   border: 1px solid var(--line);
   border-radius: 999px;
 }
+.section-lead { margin: -12px 0 20px; color: var(--muted); }
+.mini-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; margin-bottom: 18px; }
+.mini {
+  display: block;
+  padding: 14px 16px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  color: inherit;
+  text-decoration: none;
+}
+.mini:hover { border-color: var(--accent); }
+.mini strong { display: block; color: var(--accent); }
+.mini span { color: var(--muted); font-size: .92rem; }
 footer { padding-top: 24px; padding-bottom: 40px; color: var(--muted); font-size: .9rem; }
 @media (max-width: 680px) {
   nav { justify-content: flex-start; margin-bottom: 48px; }
