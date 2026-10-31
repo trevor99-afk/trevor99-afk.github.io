@@ -4,33 +4,82 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mohamed Alijate | Web Developer</title>
-  <meta name="description" content="Portfolio of Mohamed Alijate, a web developer building small, useful apps with HTML, CSS and JavaScript.">
+  <meta name="description" content="Portfolio of Mohamed Alijate, a web developer building small, useful apps with HTML, CSS, JavaScript and React.">
+  <meta property="og:title" content="Mohamed Alijate | Web Developer">
+  <meta property="og:description" content="Fourteen live web apps you can try in your browser.">
+  <meta property="og:image" content="https://trevor99-afk.github.io/img/expense-tracker.png">
+  <meta property="og:url" content="https://trevor99-afk.github.io/">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23c2361b'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Arial,sans-serif' font-size='15' font-weight='700' fill='%23fff'%3EMA%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Instrument+Sans:wght@400..700&family=JetBrains+Mono:wght@400;500&display=swap">
   <link rel="stylesheet" href="style.css">
+  <script>if ("IntersectionObserver" in window) document.documentElement.classList.add("js");</script>
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <header class="hero">
-    <nav>
+  <a class="skip" href="#projects">Skip to projects</a>
+
+  <header class="topbar">
+    <a class="mark" href="#top" aria-label="Mohamed Alijate, back to top">MA</a>
+    <nav aria-label="Main">
       <a href="#projects">Projects</a>
       <a href="#react-apps">React apps</a>
       <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
     </nav>
-    <p class="eyebrow">Web developer</p>
-    <h1>Mohamed Alijate</h1>
-    <p class="lead">I build small, useful web apps with HTML, CSS and JavaScript. Every project here runs in the browser, so you can try it right now.</p>
-    <a class="cta" href="#projects">See my projects</a>
   </header>
 
-  <main>
+  <main id="top">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Web developer</p>
+        <h1>Mohamed<br>Alijate</h1>
+        <p class="lead">I build small, useful web apps with HTML, CSS, JavaScript and React. Every project here runs in the browser, so you can try it right now.</p>
+        <div class="actions">
+          <a class="btn primary" href="#projects">See my projects</a>
+          <a class="btn" href="https://github.com/trevor99-afk">GitHub</a>
+        </div>
+        <dl class="facts">
+          <div><dt>Live demos</dt><dd>14</dd></div>
+          <div><dt>Plain JavaScript</dt><dd>4</dd></div>
+          <div><dt>React apps</dt><dd>10</dd></div>
+        </dl>
+      </div>
+
+      <div class="hero-stack" aria-hidden="true">
+        <div class="frame">
+          <span class="frame-bar"><i></i><i></i><i></i></span>
+          <img src="img/expense-tracker.png" alt="" width="1200" height="800">
+        </div>
+        <div class="frame">
+          <span class="frame-bar"><i></i><i></i><i></i></span>
+          <img src="img/react/shop.jpg" alt="" width="640" height="427">
+        </div>
+        <div class="frame">
+          <span class="frame-bar"><i></i><i></i><i></i></span>
+          <img src="img/weather-dashboard.png" alt="" width="1200" height="800">
+        </div>
+      </div>
+    </section>
+
     <section id="projects">
-      <h2>Projects</h2>
-      <div class="grid">
-        <article class="project">
-          <img src="img/expense-tracker.png" alt="Expense Tracker app showing a monthly total and category breakdown" loading="lazy">
+      <div class="section-head">
+        <h2>Projects</h2>
+        <p>Four apps built with plain JavaScript, with no frameworks and no build step.</p>
+      </div>
+
+      <div class="features">
+        <article class="feature reveal">
+          <a class="frame" href="https://trevor99-afk.github.io/expense-tracker/" aria-label="Open the Expense Tracker live demo">
+            <span class="frame-bar"><i></i><i></i><i></i><span>trevor99-afk.github.io/expense-tracker</span></span>
+            <img src="img/expense-tracker.png" alt="Expense Tracker app showing a monthly total and category breakdown" width="1200" height="800" loading="lazy">
+          </a>
           <div>
+            <p class="index">01</p>
             <h3>Expense Tracker</h3>
             <p>Track spending by month, see a category breakdown and export the data to CSV.</p>
-            <p class="tags">JavaScript · localStorage · CSV export</p>
+            <ul class="tags"><li>JavaScript</li><li>localStorage</li><li>CSV export</li></ul>
             <p class="links">
               <a href="https://trevor99-afk.github.io/expense-tracker/">Live demo</a>
               <a href="https://github.com/trevor99-afk/expense-tracker">Code</a>
@@ -38,12 +87,16 @@
           </div>
         </article>
 
-        <article class="project">
-          <img src="img/weather-dashboard.png" alt="Weather Dashboard showing current conditions and a five-day forecast" loading="lazy">
+        <article class="feature reveal">
+          <a class="frame" href="https://trevor99-afk.github.io/weather-dashboard/" aria-label="Open the Weather Dashboard live demo">
+            <span class="frame-bar"><i></i><i></i><i></i><span>trevor99-afk.github.io/weather-dashboard</span></span>
+            <img src="img/weather-dashboard.png" alt="Weather Dashboard showing current conditions and a five-day forecast" width="1200" height="800" loading="lazy">
+          </a>
           <div>
+            <p class="index">02</p>
             <h3>Weather Dashboard</h3>
             <p>Search any city for current conditions and a five-day forecast from a live API.</p>
-            <p class="tags">JavaScript · Fetch API · Open-Meteo</p>
+            <ul class="tags"><li>JavaScript</li><li>Fetch API</li><li>Open-Meteo</li></ul>
             <p class="links">
               <a href="https://trevor99-afk.github.io/weather-dashboard/">Live demo</a>
               <a href="https://github.com/trevor99-afk/weather-dashboard">Code</a>
@@ -51,12 +104,16 @@
           </div>
         </article>
 
-        <article class="project">
-          <img src="img/kanban-board.png" alt="Kanban Board with To do, In progress and Done columns" loading="lazy">
+        <article class="feature reveal">
+          <a class="frame" href="https://trevor99-afk.github.io/kanban-board/" aria-label="Open the Kanban Board live demo">
+            <span class="frame-bar"><i></i><i></i><i></i><span>trevor99-afk.github.io/kanban-board</span></span>
+            <img src="img/kanban-board.png" alt="Kanban Board with To do, In progress and Done columns" width="1200" height="800" loading="lazy">
+          </a>
           <div>
+            <p class="index">03</p>
             <h3>Kanban Board</h3>
             <p>Organise tasks across three columns with drag and drop, plus buttons for keyboard users.</p>
-            <p class="tags">JavaScript · Drag and Drop API · localStorage</p>
+            <ul class="tags"><li>JavaScript</li><li>Drag and Drop API</li><li>localStorage</li></ul>
             <p class="links">
               <a href="https://trevor99-afk.github.io/kanban-board/">Live demo</a>
               <a href="https://github.com/trevor99-afk/kanban-board">Code</a>
@@ -64,12 +121,16 @@
           </div>
         </article>
 
-        <article class="project">
-          <img src="img/typing-test.png" alt="Typing Speed Test with live time, WPM and accuracy stats" loading="lazy">
+        <article class="feature reveal">
+          <a class="frame" href="https://trevor99-afk.github.io/typing-test/" aria-label="Open the Typing Speed Test live demo">
+            <span class="frame-bar"><i></i><i></i><i></i><span>trevor99-afk.github.io/typing-test</span></span>
+            <img src="img/typing-test.png" alt="Typing Speed Test with live time, WPM and accuracy stats" width="1200" height="800" loading="lazy">
+          </a>
           <div>
+            <p class="index">04</p>
             <h3>Typing Speed Test</h3>
             <p>A 30-second test with live words-per-minute, accuracy and per-character feedback.</p>
-            <p class="tags">JavaScript · DOM · Timers</p>
+            <ul class="tags"><li>JavaScript</li><li>DOM</li><li>Timers</li></ul>
             <p class="links">
               <a href="https://trevor99-afk.github.io/typing-test/">Live demo</a>
               <a href="https://github.com/trevor99-afk/typing-test">Code</a>
@@ -80,20 +141,54 @@
     </section>
 
     <section id="react-apps">
-      <h2>React apps</h2>
-      <p class="section-lead">Ten smaller demos built with React, TypeScript and Vite, using sample data.</p>
-      <div class="mini-grid">
-        <a class="mini" href="https://trevor99-afk.github.io/react-portfolio-apps/finance/"><strong>Pocketwise</strong><span>Expense tracking and budgets</span></a>
-        <a class="mini" href="https://trevor99-afk.github.io/react-portfolio-apps/recipes/"><strong>Pantry Pal</strong><span>Ingredient search and favorites</span></a>
-        <a class="mini" href="https://trevor99-afk.github.io/react-portfolio-apps/habits/"><strong>Little Wins</strong><span>Habit check-ins and streaks</span></a>
-        <a class="mini" href="https://trevor99-afk.github.io/react-portfolio-apps/events/"><strong>Out &amp; About</strong><span>Event discovery and saved events</span></a>
-        <a class="mini" href="https://trevor99-afk.github.io/react-portfolio-apps/jobs/"><strong>Next Step</strong><span>Job application pipeline</span></a>
-        <a class="mini" href="https://trevor99-afk.github.io/react-portfolio-apps/shop/"><strong>Good Things</strong><span>Product catalog and cart</span></a>
-        <a class="mini" href="https://trevor99-afk.github.io/react-portfolio-apps/flashcards/"><strong>Recall</strong><span>Flashcards and study progress</span></a>
-        <a class="mini" href="https://trevor99-afk.github.io/react-portfolio-apps/a11y/"><strong>A11y Lens</strong><span>HTML accessibility checks</span></a>
-        <a class="mini" href="https://trevor99-afk.github.io/react-portfolio-apps/teamboard/"><strong>Teamspace</strong><span>Project board and task creation</span></a>
-        <a class="mini" href="https://trevor99-afk.github.io/react-portfolio-apps/weather/"><strong>Skycast</strong><span>Forecast cards and unit toggle</span></a>
+      <div class="section-head">
+        <h2>React apps</h2>
+        <p>Ten smaller demos built with React, TypeScript and Vite, using sample data.</p>
       </div>
+
+      <div class="tiles reveal">
+        <a class="tile" style="--app:#39836d" href="https://trevor99-afk.github.io/react-portfolio-apps/finance/">
+          <img src="img/react/finance.jpg" alt="" width="640" height="427" loading="lazy">
+          <strong>Pocketwise</strong><span>Expense tracking and budgets</span>
+        </a>
+        <a class="tile" style="--app:#bd6448" href="https://trevor99-afk.github.io/react-portfolio-apps/recipes/">
+          <img src="img/react/recipes.jpg" alt="" width="640" height="427" loading="lazy">
+          <strong>Pantry Pal</strong><span>Ingredient search and favorites</span>
+        </a>
+        <a class="tile" style="--app:#7271b7" href="https://trevor99-afk.github.io/react-portfolio-apps/habits/">
+          <img src="img/react/habits.jpg" alt="" width="640" height="427" loading="lazy">
+          <strong>Little Wins</strong><span>Habit check-ins and streaks</span>
+        </a>
+        <a class="tile" style="--app:#397896" href="https://trevor99-afk.github.io/react-portfolio-apps/events/">
+          <img src="img/react/events.jpg" alt="" width="640" height="427" loading="lazy">
+          <strong>Out &amp; About</strong><span>Event discovery and saved events</span>
+        </a>
+        <a class="tile" style="--app:#a66c3f" href="https://trevor99-afk.github.io/react-portfolio-apps/jobs/">
+          <img src="img/react/jobs.jpg" alt="" width="640" height="427" loading="lazy">
+          <strong>Next Step</strong><span>Job application pipeline</span>
+        </a>
+        <a class="tile" style="--app:#b56064" href="https://trevor99-afk.github.io/react-portfolio-apps/shop/">
+          <img src="img/react/shop.jpg" alt="" width="640" height="427" loading="lazy">
+          <strong>Good Things</strong><span>Product catalog and cart</span>
+        </a>
+        <a class="tile" style="--app:#478270" href="https://trevor99-afk.github.io/react-portfolio-apps/flashcards/">
+          <img src="img/react/flashcards.jpg" alt="" width="640" height="427" loading="lazy">
+          <strong>Recall</strong><span>Flashcards and study progress</span>
+        </a>
+        <a class="tile" style="--app:#6758a6" href="https://trevor99-afk.github.io/react-portfolio-apps/a11y/">
+          <img src="img/react/a11y.jpg" alt="" width="640" height="427" loading="lazy">
+          <strong>A11y Lens</strong><span>HTML accessibility checks</span>
+        </a>
+        <a class="tile" style="--app:#587b91" href="https://trevor99-afk.github.io/react-portfolio-apps/teamboard/">
+          <img src="img/react/teamboard.jpg" alt="" width="640" height="427" loading="lazy">
+          <strong>Teamspace</strong><span>Project board and task creation</span>
+        </a>
+        <a class="tile" style="--app:#47789a" href="https://trevor99-afk.github.io/react-portfolio-apps/weather/">
+          <img src="img/react/weather.jpg" alt="" width="640" height="427" loading="lazy">
+          <strong>Skycast</strong><span>Forecast cards and unit toggle</span>
+        </a>
+      </div>
+
       <p class="links">
         <a href="https://trevor99-afk.github.io/react-portfolio-apps/">All demos</a>
         <a href="https://github.com/trevor99-afk/react-portfolio-apps">Code</a>
@@ -101,23 +196,31 @@
     </section>
 
     <section id="skills">
-      <h2>Skills</h2>
-      <ul class="skills">
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>TypeScript</li>
-        <li>React</li>
-        <li>Vite</li>
-        <li>Responsive design</li>
-        <li>REST APIs</li>
-        <li>Git and GitHub</li>
-      </ul>
+      <div class="section-head">
+        <h2>Skills</h2>
+      </div>
+      <div class="skills reveal">
+        <div>
+          <h3>Languages</h3>
+          <ul><li>HTML</li><li>CSS</li><li>JavaScript</li><li>TypeScript</li></ul>
+        </div>
+        <div>
+          <h3>Tools</h3>
+          <ul><li>React</li><li>Vite</li><li>Git and GitHub</li></ul>
+        </div>
+        <div>
+          <h3>Practices</h3>
+          <ul><li>Responsive design</li><li>REST APIs</li></ul>
+        </div>
+      </div>
     </section>
 
     <section id="contact">
-      <h2>Contact</h2>
-      <p>You can find my code and reach me on <a href="https://github.com/trevor99-afk">GitHub</a>.</p>
+      <div class="contact reveal">
+        <h2>Contact</h2>
+        <p>All of my code is on GitHub.</p>
+        <a class="btn" href="https://github.com/trevor99-afk">github.com/trevor99-afk</a>
+      </div>
     </section>
   </main>
 
